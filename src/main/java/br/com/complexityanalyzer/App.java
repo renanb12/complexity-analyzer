@@ -35,7 +35,7 @@ public class App{
         XYChart chart = chartGenerator.generateOperationsChart(result);
         new SwingWrapper<>(chart).displayChart();
 
-        XYChart chartexecutionTime = chartGenerator.generateExecutionResult(result);
+        XYChart chartexecutionTime = chartGenerator.generateExecutionTimeChart(result);
         new SwingWrapper<>(chartexecutionTime).displayChart();
     }
 }

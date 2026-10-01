@@ -37,7 +37,7 @@ public class ChartGenerator {
             return chart;
     }
 
-    public XYChart generateExecutionResult(AnalysisResult analysisResult){
+    public XYChart generateExecutionTimeChart(AnalysisResult analysisResult){
         List<ExecutionResult> results = analysisResult.getExecutionResults();
         int size = results.size();
 
