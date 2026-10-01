@@ -8,6 +8,13 @@
   <name>complexity-analyzer</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    <!-- Source: https://mvnrepository.com/artifact/org.knowm.xchart/xchart -->
+    <dependency>
+      <groupId>org.knowm.xchart</groupId>
+      <artifactId>xchart</artifactId>
+      <version>4.0.4</version>
+      <scope>compile</scope>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

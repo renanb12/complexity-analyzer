@@ -1,9 +1,13 @@
 package br.com.complexityanalyzer;
 
+import org.knowm.xchart.SwingWrapper;
+import org.knowm.xchart.XYChart;
+
 import br.com.complexityanalyzer.algorithm.implementations.ArrayTraversal;
 import br.com.complexityanalyzer.analysis.AnalysisResult;
 import br.com.complexityanalyzer.analysis.ComplexityAnalyzer;
 import br.com.complexityanalyzer.analysis.ExecutionResult;
+import br.com.complexityanalyzer.chart.ChartGenerator;
 import br.com.complexityanalyzer.generator.implementations.RandomIntegerArrayGenerator;
 
 public class App{
@@ -25,5 +29,13 @@ public class App{
             execution.getExecutionTime()
             );
         }
+
+        ChartGenerator chartGenerator = new ChartGenerator();
+
+        XYChart chart = chartGenerator.generateOperationsChart(result);
+        new SwingWrapper<>(chart).displayChart();
+
+        XYChart chartexecutionTime = chartGenerator.generateExecutionResult(result);
+        new SwingWrapper<>(chartexecutionTime).displayChart();
     }
 }
